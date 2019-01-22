@@ -71,9 +71,7 @@
     return shareView;
 }
 
-#pragma mark - Event
-
-- (IBAction)clickClose:(id)sender
+- (void)close
 {
     // 动画关闭
     [UIView animateWithDuration:0.3f animations:^{
@@ -82,6 +80,13 @@
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
+}
+
+#pragma mark - Event
+
+- (IBAction)clickClose:(id)sender
+{
+    [self close];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -136,6 +141,8 @@
     if (shareItem.handler) {
         shareItem.handler(shareItem);
     }
+    // 关闭
+    [self close];
 }
 
 @end

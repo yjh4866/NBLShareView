@@ -29,14 +29,23 @@
 
 - (IBAction)clickShare:(id)sender
 {
-    NBLShareItem *shareItem0 = [NBLShareItem createWithIcon:[UIImage imageNamed:@"share_friend"] andTitle:@"分享到微信" handler:^(NBLShareItem * _Nonnull shareItem) {
-        NSLog(@"分享到微信");
+    NBLShareItem *shareItem0 = [NBLShareItem createItemForShareToWXFriendWithHandler:^(NBLShareItem * _Nonnull shareItem) {
+        NSLog(@"分享给微信好友");
     }];
-    NBLShareItem *shareItem1 = [NBLShareItem createWithIcon:[UIImage imageNamed:@"share_friend"] andTitle:@"分享到朋友圈" handler:^(NBLShareItem * _Nonnull shareItem) {
-        NSLog(@"分享到朋友圈");
+    NBLShareItem *shareItem1 = [NBLShareItem createItemForShareToWXTimelineWithHandler:^(NBLShareItem * _Nonnull shareItem) {
+        NSLog(@"分享到微信朋友圈");
     }];
-    NBLShareView *shareView = [NBLShareView show:@[shareItem0, shareItem1, shareItem0, shareItem1, shareItem0, shareItem1, shareItem0, shareItem1, shareItem0, shareItem1, shareItem0, shareItem1, shareItem0, shareItem1, shareItem0, shareItem1, shareItem1] on:self.view];
-    shareView.minimumLineSpacing = 80;
+    NBLShareItem *shareItem2 = [NBLShareItem createItemForShareToQQWithHandler:^(NBLShareItem * _Nonnull shareItem) {
+        NSLog(@"分享到QQ");
+    }];
+    NBLShareItem *shareItem3 = [NBLShareItem createItemForCopyLinkWithHandler:^(NBLShareItem * _Nonnull shareItem) {
+        NSLog(@"复制链接");
+    }];
+    NBLShareItem *shareItem4 = [NBLShareItem createItemForSaveToAlbumWithHandler:^(NBLShareItem * _Nonnull shareItem) {
+        NSLog(@"保存到相册");
+    }];
+    NBLShareView *shareView = [NBLShareView show:@[shareItem0, shareItem1, shareItem2, shareItem3, shareItem4] on:self.view];
+    shareView.minimumLineSpacing = 20;
 }
 
 @end
