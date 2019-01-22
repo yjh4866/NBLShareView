@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'NBLShareView_Example' do
+  pod 'NBLShareView', :path => '../'
+
+  target 'NBLShareView_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
