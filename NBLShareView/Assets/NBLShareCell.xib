@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NBLShareCell">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rr7-Rp-fPH">
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Rr7-Rp-fPH" secondAttribute="height" multiplier="1:1" id="paY-5v-RZn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享到微信" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fb-Aq-UdI">
+                        <rect key="frame" x="4.5" y="80.5" width="61.5" height="14.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Rr7-Rp-fPH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7hP-Bc-6OR"/>
+                <constraint firstAttribute="trailing" secondItem="Rr7-Rp-fPH" secondAttribute="trailing" id="Gwh-y4-II2"/>
+                <constraint firstItem="0Fb-Aq-UdI" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="epN-nD-01R"/>
+                <constraint firstItem="Rr7-Rp-fPH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uW6-3S-nGV"/>
+                <constraint firstAttribute="bottom" secondItem="0Fb-Aq-UdI" secondAttribute="bottom" constant="5" id="vSS-5J-wZz"/>
+            </constraints>
+            <connections>
+                <outlet property="imageViewIcon" destination="Rr7-Rp-fPH" id="8PH-sB-AVc"/>
+                <outlet property="labelTitle" destination="0Fb-Aq-UdI" id="xW0-m7-eKm"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

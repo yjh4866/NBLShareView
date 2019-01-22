@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="NBLShareView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1t-4z-EZu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="18k-Ba-PLR" appends="YES" id="TWK-xo-lpy"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy4-cM-dd7">
+                    <rect key="frame" x="0.0" y="497" width="375" height="170"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wya-sM-DbM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="Cy1-Jj-LT3"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RMx-k0-9ex">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="yDq-JV-v6A"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="WN6-4r-u2t"/>
+                            </connections>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kp-hb-eYl">
+                            <rect key="frame" x="0.0" y="120" width="375" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0Mz-u0-TWP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="关闭">
+                                <color key="titleColor" red="0.75294117647058822" green="0.0" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="clickClose:" destination="iN0-l3-epB" eventType="touchUpInside" id="jqR-6p-NMU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="wya-sM-DbM" firstAttribute="leading" secondItem="hy4-cM-dd7" secondAttribute="leading" id="ByP-Nd-TzZ"/>
+                        <constraint firstItem="wya-sM-DbM" firstAttribute="top" secondItem="hy4-cM-dd7" secondAttribute="top" id="Jq0-Su-sAp"/>
+                        <constraint firstAttribute="trailing" secondItem="wya-sM-DbM" secondAttribute="trailing" id="Snf-hd-MoM"/>
+                        <constraint firstAttribute="bottom" secondItem="8kp-hb-eYl" secondAttribute="bottom" id="UHL-PL-3Y3"/>
+                        <constraint firstAttribute="trailing" secondItem="8kp-hb-eYl" secondAttribute="trailing" id="ZZK-H5-qIp"/>
+                        <constraint firstItem="8kp-hb-eYl" firstAttribute="leading" secondItem="hy4-cM-dd7" secondAttribute="leading" id="ehe-Fg-Hu6"/>
+                        <constraint firstItem="8kp-hb-eYl" firstAttribute="top" secondItem="wya-sM-DbM" secondAttribute="bottom" id="eks-Cd-thw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hy4-cM-dd7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4Hg-18-bno"/>
+                <constraint firstAttribute="trailing" secondItem="o1t-4z-EZu" secondAttribute="trailing" id="9eB-5c-9Sa"/>
+                <constraint firstItem="o1t-4z-EZu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gdz-Zl-O7R"/>
+                <constraint firstAttribute="bottom" secondItem="o1t-4z-EZu" secondAttribute="bottom" id="HCN-1Z-Fi8"/>
+                <constraint firstItem="o1t-4z-EZu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Sgn-zM-rDa"/>
+                <constraint firstAttribute="bottom" secondItem="hy4-cM-dd7" secondAttribute="bottom" id="TVy-5A-wP8"/>
+                <constraint firstAttribute="trailing" secondItem="hy4-cM-dd7" secondAttribute="trailing" id="nN1-Ti-EUJ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="wya-sM-DbM" id="wHl-KO-S5t"/>
+                <outlet property="constraintCollectionViewHeight" destination="Cy1-Jj-LT3" id="mPf-ae-qBw"/>
+                <outlet property="contentView" destination="hy4-cM-dd7" id="kkl-ve-s51"/>
+                <outlet property="coverView" destination="o1t-4z-EZu" id="3sx-Yg-vue"/>
+            </connections>
+            <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
+        </view>
+        <tapGestureRecognizer id="18k-Ba-PLR">
+            <connections>
+                <action selector="clickClose:" destination="iN0-l3-epB" id="Qt3-h3-Pbg"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

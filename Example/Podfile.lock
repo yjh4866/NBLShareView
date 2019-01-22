@@ -4,7 +4,9 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - NBLShareView (0.1.0)
+  - Masonry (1.1.0)
+  - NBLShareView (0.1.0):
+    - Masonry
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -13,6 +15,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FBSnapshotTestCase
+    - Masonry
 
 EXTERNAL SOURCES:
   NBLShareView:
@@ -20,8 +23,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  NBLShareView: 9676e2f6df213239bd676032b618945d8fb0c271
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  NBLShareView: bd57f7ed66aca2f809bdc4bd4697bc7944659e36
 
-PODFILE CHECKSUM: 4ce8db42d66c837328805e6206ecda320b5ad550
+PODFILE CHECKSUM: ef677ff571e05b51f397fbfae7c1bbc0f91d0dee
 
 COCOAPODS: 1.5.3

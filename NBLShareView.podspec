@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NBLShareView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of NBLShareView.'
+  s.summary          = '用于分享场景的一套UI，内置微信分享等的图标元素。NBLShareView is a set for share.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+用于分享场景的一套UI，内置微信分享等的图标元素。NBLShareView is a set for share.
                        DESC
 
   s.homepage         = 'https://github.com/yjh4866/NBLShareView'
@@ -32,11 +32,11 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'NBLShareView/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'NBLShareView' => ['NBLShareView/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'NBLShareView' => ['NBLShareView/Assets/*.{xib}']
+  }
 
-  s.public_header_files = 'NBLShareView/Classes/**/*.h'
+  s.public_header_files = 'NBLShareView/Classes/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Masonry'
 end
