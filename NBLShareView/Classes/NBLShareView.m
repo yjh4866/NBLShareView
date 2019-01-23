@@ -49,7 +49,7 @@
 + (instancetype)show:(NSArray<NBLShareItem *> *)shareItems on:(UIView *)superView
 {
     // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.NBLShareView"];
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     // 获取分享视图
     NBLShareView *shareView = [bundle loadNibNamed:@"NBLShareView.bundle/NBLShareView" owner:nil options:nil][0];
     shareView.shareItems = shareItems;

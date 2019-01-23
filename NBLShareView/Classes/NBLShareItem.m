@@ -6,6 +6,7 @@
 //
 
 #import "NBLShareItem.h"
+#import "NBLShareView.h"
 
 @implementation NBLShareItem
 
@@ -23,7 +24,7 @@
 + (instancetype)createItemForShareToWXFriendWithHandler:(void(^)(NBLShareItem *shareItem))handler
 {
     // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.NBLShareView"];
+    NSBundle *bundle = [NSBundle bundleForClass:NBLShareView.self];
     UIImage *icon = [UIImage imageNamed:@"NBLShareView.bundle/WeiXinFriend" inBundle:bundle compatibleWithTraitCollection:nil];
     //
     return [NBLShareItem createWithIcon:icon andTitle:@"分享给好友" handler:handler];
@@ -32,7 +33,7 @@
 + (instancetype)createItemForShareToWXTimelineWithHandler:(void(^)(NBLShareItem *shareItem))handler
 {
     // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.NBLShareView"];
+    NSBundle *bundle = [NSBundle bundleForClass:NBLShareView.self];
     UIImage *icon = [UIImage imageNamed:@"NBLShareView.bundle/WeiXinTimeline" inBundle:bundle compatibleWithTraitCollection:nil];
     //
     return [NBLShareItem createWithIcon:icon andTitle:@"分享到朋友圈" handler:handler];
@@ -41,7 +42,7 @@
 + (instancetype)createItemForShareToQQWithHandler:(void(^)(NBLShareItem *shareItem))handler
 {
     // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.NBLShareView"];
+    NSBundle *bundle = [NSBundle bundleForClass:NBLShareView.self];
     UIImage *icon = [UIImage imageNamed:@"NBLShareView.bundle/QQ" inBundle:bundle compatibleWithTraitCollection:nil];
     //
     return [NBLShareItem createWithIcon:icon andTitle:@"分享到QQ" handler:handler];
@@ -50,7 +51,7 @@
 + (instancetype)createItemForCopyLinkWithHandler:(void(^)(NBLShareItem *shareItem))handler
 {
     // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.NBLShareView"];
+    NSBundle *bundle = [NSBundle bundleForClass:NBLShareView.self];
     UIImage *icon = [UIImage imageNamed:@"NBLShareView.bundle/CopyLink" inBundle:bundle compatibleWithTraitCollection:nil];
     //
     return [NBLShareItem createWithIcon:icon andTitle:@"复制链接" handler:handler];
@@ -59,7 +60,7 @@
 + (instancetype)createItemForSaveToAlbumWithHandler:(void(^)(NBLShareItem *shareItem))handler
 {
     // 加载Bundle
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.NBLShareView"];
+    NSBundle *bundle = [NSBundle bundleForClass:NBLShareView.self];
     UIImage *icon = [UIImage imageNamed:@"NBLShareView.bundle/SaveToAlbum" inBundle:bundle compatibleWithTraitCollection:nil];
     //
     return [NBLShareItem createWithIcon:icon andTitle:@"保存到相册" handler:handler];
