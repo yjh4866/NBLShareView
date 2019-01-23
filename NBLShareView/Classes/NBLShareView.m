@@ -6,7 +6,6 @@
 //
 
 #import "NBLShareView.h"
-#import <Masonry/Masonry.h>
 #import "NBLShareCell.h"
 
 #define CellId_ShareItem   @"CellId_ShareItem"
@@ -58,9 +57,14 @@
     [shareView.collectionView registerNib:[UINib nibWithNibName:@"NBLShareView.bundle/NBLShareCell" bundle:bundle] forCellWithReuseIdentifier:CellId_ShareItem];
     // 添加到指定视图
     [superView addSubview:shareView];
-    [shareView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(superView);
-    }];
+    // 自定义约束
+    shareView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeRight multiplier:1 constant:0];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+    [NSLayoutConstraint activateConstraints:@[left, top, right, bottom]];
+    
     // 动画展现
     shareView.coverView.alpha = 0;
     shareView.contentView.center = CGPointMake(shareView.contentView.bounds.size.width/2, superView.bounds.size.height+shareView.bounds.size.height/2);

@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Object-C。用于分享场景的一套UI，内置微信分享等的图标元素。NBLShareView is a set for share.
+Object-C。用于分享场景的一套UI，内置微信分享、QQ分享、复制链接、保存到相册等的常用图标元素。NBLShareView is a set for share.
                        DESC
 
   s.homepage         = 'https://github.com/yjh4866/NBLShareView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  # s.screenshots     = 'www.github.com/screenshots_1.jpg', 'www.github.com/screenshots_2.jpg'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '杨建红' => 'yjh4866@163.com' }
   s.source           = { :git => 'https://github.com/yjh4866/NBLShareView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://blog.csdn.net/yjh4866'
 
   s.ios.deployment_target = '9.0'
 
@@ -38,5 +38,5 @@ Object-C。用于分享场景的一套UI，内置微信分享等的图标元素�
 
   s.public_header_files = 'NBLShareView/Classes/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Masonry'
+  # s.dependency 'Masonry'
 end

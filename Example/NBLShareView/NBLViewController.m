@@ -44,8 +44,7 @@
     NBLShareItem *shareItem4 = [NBLShareItem createItemForSaveToAlbumWithHandler:^(NBLShareItem * _Nonnull shareItem) {
         NSLog(@"保存到相册");
     }];
-    NBLShareView *shareView = [NBLShareView show:@[shareItem0, shareItem1, shareItem2, shareItem3, shareItem4] on:self.view];
-    shareView.minimumLineSpacing = 20;
+    [NBLShareView show:@[shareItem0, shareItem1, shareItem2, shareItem3, shareItem4] on:self.view];
 }
 
 @end
