@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NBLShareView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Object-C。用于分享场景的一套UI，内置微信分享等的图标元素。NBLShareView is a set for share.'
 
 # This description is used to generate tags and improve search results.
