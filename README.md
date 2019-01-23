@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 pod 'NBLShareView'
 ```
 
+## 预览 Preview
+
+![NBLShareView_1](https://github.com/yjh4866/NBLShareView/blob/master/screenshots/screenshots_1.jpg?raw=true)
+![NBLShareView_2](https://github.com/yjh4866/NBLShareView/blob/master/screenshots/screenshots_2.jpg?raw=true)
+
 ## Author
 
 杨建红, yjh4866@163.com
