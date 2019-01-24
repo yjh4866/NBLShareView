@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - NBLShareView (0.1.0)
+  - NBLShareView (0.1.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  NBLShareView: 86f329713a7dfe0456a8d5730090ddd440e3c680
+  NBLShareView: 7d416d560f58a2aabaeec5456f6488cc4d9f2e1d
 
 PODFILE CHECKSUM: ef677ff571e05b51f397fbfae7c1bbc0f91d0dee
 

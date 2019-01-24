@@ -249,7 +249,7 @@
 				ORGANIZATIONNAME = "杨建红";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = B5JSJJWSP9;
+						DevelopmentTeam = Y3UD3PVDBM;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -523,7 +523,7 @@
 			baseConfigurationReference = 6295AFE8080D4EA523564A41 /* Pods-NBLShareView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B5JSJJWSP9;
+				DEVELOPMENT_TEAM = Y3UD3PVDBM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NBLShareView/NBLShareView-Prefix.pch";
 				INFOPLIST_FILE = "NBLShareView/NBLShareView-Info.plist";
@@ -539,7 +539,7 @@
 			baseConfigurationReference = 8D3C7F9704CF6C6C6A504038 /* Pods-NBLShareView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B5JSJJWSP9;
+				DEVELOPMENT_TEAM = Y3UD3PVDBM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NBLShareView/NBLShareView-Prefix.pch";
 				INFOPLIST_FILE = "NBLShareView/NBLShareView-Info.plist";

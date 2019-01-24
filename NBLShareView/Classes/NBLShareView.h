@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)show:(NSArray<NBLShareItem *> *)shareItems on:(UIView *)superView;
 
-- (void)close;
+- (void)close:(void(^)(void))completion;
 
 @end
 

@@ -75,7 +75,7 @@
     return shareView;
 }
 
-- (void)close
+- (void)close:(void(^)(void))completion
 {
     // 动画关闭
     [UIView animateWithDuration:0.3f animations:^{
@@ -83,6 +83,9 @@
         self.contentView.center = CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height+self.bounds.size.height/2);
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
+        if (completion) {
+            completion();
+        }
     }];
 }
 
@@ -90,7 +93,7 @@
 
 - (IBAction)clickClose:(id)sender
 {
-    [self close];
+    [self close:nil];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -142,11 +145,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NBLShareItem *shareItem = self.shareItems[indexPath.row];
-    if (shareItem.handler) {
-        shareItem.handler(shareItem);
-    }
     // 关闭
-    [self close];
+    [self close:^{
+        // 关闭动画完成后再回调
+        if (shareItem.handler) {
+            shareItem.handler(shareItem);
+        }
+    }];
 }
 
 @end
