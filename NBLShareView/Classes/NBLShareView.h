@@ -8,8 +8,6 @@
 #import <UIKit/UIKit.h>
 #import "NBLShareItem.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface NBLShareView : UIView
 
 // 分享项尺寸。默认为80x80
@@ -24,5 +22,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)close:(void(^)(void))completion;
 
 @end
-
-NS_ASSUME_NONNULL_END
