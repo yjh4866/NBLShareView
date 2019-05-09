@@ -46,31 +46,25 @@
 
 #pragma mark - Public
 
-+ (instancetype)show:(NSArray<NBLShareItem *> *)shareItems on:(UIView *)superView
++ (instancetype)show:(NSArray<NBLShareItem *> *)shareItems
 {
     // 加载Bundle
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     // 获取分享视图
     NBLShareView *shareView = [bundle loadNibNamed:@"NBLShareView.bundle/NBLShareView" owner:nil options:nil][0];
     shareView.shareItems = shareItems;
-    // 注册
+    // 注册Cell
     [shareView.collectionView registerNib:[UINib nibWithNibName:@"NBLShareView.bundle/NBLShareCell" bundle:bundle] forCellWithReuseIdentifier:CellId_ShareItem];
-    // 添加到指定视图
-    [superView addSubview:shareView];
-    // 自定义约束
-    shareView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeTop multiplier:1 constant:0];
-    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeRight multiplier:1 constant:0];
-    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:shareView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
-    [NSLayoutConstraint activateConstraints:@[left, top, right, bottom]];
+    // 显示
+    [[NBLShareView frontWindow] addSubview:shareView];
+    shareView.frame = CGRectMake(0, 0, shareView.superview.frame.size.width, shareView.superview.frame.size.height);
     
     // 动画展现
     shareView.coverView.alpha = 0;
-    shareView.contentView.center = CGPointMake(shareView.contentView.bounds.size.width/2, superView.bounds.size.height+shareView.bounds.size.height/2);
+    shareView.contentView.center = CGPointMake(shareView.contentView.bounds.size.width/2, shareView.bounds.size.height+shareView.bounds.size.height/2);
     [UIView animateWithDuration:0.3f animations:^{
         shareView.coverView.alpha = 1;
-        shareView.contentView.center = CGPointMake(shareView.contentView.bounds.size.width/2, superView.bounds.size.height-shareView.bounds.size.height/2);
+        shareView.contentView.center = CGPointMake(shareView.contentView.bounds.size.width/2, shareView.bounds.size.height-shareView.bounds.size.height/2);
     }];
     return shareView;
 }
@@ -152,6 +146,24 @@
             shareItem.handler(shareItem);
         }
     }];
+}
+
+
+#pragma mark - Private
+
++ (UIWindow *)frontWindow
+{
+    NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
+    for (UIWindow *window in frontToBackWindows) {
+        BOOL windowOnMainScreen = window.screen == UIScreen.mainScreen;
+        BOOL windowIsVisible = !window.hidden && window.alpha > 0;
+        BOOL windowKeyWindow = window.isKeyWindow;
+        
+        if(windowOnMainScreen && windowIsVisible && windowKeyWindow) {
+            return window;
+        }
+    }
+    return nil;
 }
 
 @end

@@ -44,7 +44,7 @@
     NBLShareItem *shareItem4 = [NBLShareItem createItemForSaveToAlbumWithHandler:^(NBLShareItem * _Nonnull shareItem) {
         NSLog(@"保存到相册");
     }];
-    [NBLShareView show:@[shareItem0, shareItem1, shareItem2, shareItem3, shareItem4] on:self.view];
+    [NBLShareView show:@[shareItem0, shareItem1, shareItem2, shareItem3, shareItem4]];
 }
 
 @end

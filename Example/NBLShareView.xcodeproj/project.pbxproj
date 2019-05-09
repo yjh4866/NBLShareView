@@ -226,7 +226,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				C7AA2FABDF8ED0B378EB9604 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,7 +248,7 @@
 				ORGANIZATIONNAME = "杨建红";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = Y3UD3PVDBM;
+						DevelopmentTeam = NZBNK9L6AA;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -261,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -342,28 +342,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7AA2FABDF8ED0B378EB9604 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NBLShareView_Tests/Pods-NBLShareView_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBLShareView_Tests/Pods-NBLShareView_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DD4212FB0987CDA79C235A3A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,7 +350,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NBLShareView_Example/Pods-NBLShareView_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NBLShareView_Example/Pods-NBLShareView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NBLShareView/NBLShareView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -383,7 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBLShareView_Example/Pods-NBLShareView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBLShareView_Example/Pods-NBLShareView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -523,7 +501,7 @@
 			baseConfigurationReference = 6295AFE8080D4EA523564A41 /* Pods-NBLShareView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y3UD3PVDBM;
+				DEVELOPMENT_TEAM = NZBNK9L6AA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NBLShareView/NBLShareView-Prefix.pch";
 				INFOPLIST_FILE = "NBLShareView/NBLShareView-Info.plist";
@@ -539,7 +517,7 @@
 			baseConfigurationReference = 8D3C7F9704CF6C6C6A504038 /* Pods-NBLShareView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y3UD3PVDBM;
+				DEVELOPMENT_TEAM = NZBNK9L6AA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NBLShareView/NBLShareView-Prefix.pch";
 				INFOPLIST_FILE = "NBLShareView/NBLShareView-Info.plist";

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NBLShareView'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Object-C。用于分享场景的一套UI，内置微信分享等的图标元素。NBLShareView is a set for share.'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Object-C。用于分享场景的一套UI，内置微信分享、QQ分享、复�
                        DESC
 
   s.homepage         = 'https://github.com/yjh4866/NBLShareView'
-  # s.screenshots     = 'www.github.com/screenshots_1.jpg', 'www.github.com/screenshots_2.jpg'
+  s.screenshots     = 'https://github.com/yjh4866/NBLShareView/blob/master/screenshots/screenshots_1.jpg?raw=true', 'https://github.com/yjh4866/NBLShareView/blob/master/screenshots/screenshots_2.jpg?raw=true'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '杨建红' => 'yjh4866@163.com' }
   s.source           = { :git => 'https://github.com/yjh4866/NBLShareView.git', :tag => s.version.to_s }

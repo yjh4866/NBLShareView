@@ -17,7 +17,7 @@
 // 行距。默认为20
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 
-+ (instancetype)show:(NSArray<NBLShareItem *> *)shareItems on:(UIView *)superView;
++ (instancetype)show:(NSArray<NBLShareItem *> *)shareItems;
 
 - (void)close:(void(^)(void))completion;
 
